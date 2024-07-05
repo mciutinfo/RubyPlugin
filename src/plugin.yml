@@ -1,0 +1,11 @@
+main: cloud.voltis.mciut.main
+name: TestPlugin
+version: '1.0'
+description: A test plugin
+load: POSTWORLD
+author: Voltis
+website: voltis.me
+prefix: Testing
+commands:
+  foo:
+    description: Foo command

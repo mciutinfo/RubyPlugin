@@ -8,6 +8,12 @@ public class main extends JavaPlugin{
 
     @Override
     public void onEnable(){
+
+        Bukkit.getConsoleSender().sendMessage("§aLoading plugin ...");
+
+        Bukkit.getPluginManager().registerEvents(new deathListener(), this);
+        Bukkit.getPluginManager().registerEvents(new rubyItemProtection(), this);
+
         Bukkit.getConsoleSender().sendMessage("§aPlugin enabled!");
     }
 
@@ -15,6 +21,9 @@ public class main extends JavaPlugin{
     public void onDisable() {
         Bukkit.getLogger().info(ChatColor.RED + "Disabled " + this.getName());
     }
+
+
+
 
 
 

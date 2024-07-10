@@ -6,6 +6,4 @@ load: POSTWORLD
 author: Voltis
 website: voltis.me
 prefix: Testing
-commands:
-  foo:
-    description: Foo command
+api-version: 1.21

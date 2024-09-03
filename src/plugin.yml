@@ -7,3 +7,9 @@ author: Voltis
 website: voltis.me
 prefix: Testing
 api-version: 1.21
+
+commands:
+  doc:
+    description: Donne le lien vers la documentation
+    usage: /<command>
+    aliases: [documentation]

@@ -1,6 +1,5 @@
 package cloud.voltis.mciut;
 
-import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -9,7 +8,8 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
+import static cloud.voltis.mciut.tools.isAssured;
 
 public class deathListener implements Listener {
 
@@ -23,10 +23,9 @@ public class deathListener implements Listener {
         List<ItemStack> notDropped = new ArrayList<>();
 
         for (ItemStack item : event.getDrops()) {
-            if (item.getType() == Material.CLOCK && Objects.requireNonNull(item.getItemMeta()).hasCustomModelData()) {
+            if (isAssured(item)) {
                 notDropped.add(item);
             } else {
-                // On supprime l'item de l'inventaire du joueur
                 removeItemFromInventory(item, event.getEntity().getInventory());
             }
         }
